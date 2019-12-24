@@ -45,18 +45,28 @@ Below are the example props available
 
 ```javascript
 import React from 'react';
-import LottieView from "lottie-react-native";
-import changeSVGColor from '@killerwink/lottie-react-native-color';
+import { Text } from 'react-native';
+import HeaderBar from '@killerwink/killer-react-native-header';
 
-export const Animation = () => {
+  const options={
+            HeaderOptions: {
+               height: 90, // integer value for the height of the header component
+               padding: 10, // integer value for the internal padding of the header component
+               backgroundColor: '#0081CF', // String Hex value for the color of the header component
+            },
+            StatusBarOptions: {
+               backgroundColor: '#0081CF', // String Hex value for the color of the status-bar component
+               barStyle: 'dark-content', // String value for the shade of the status-bar content one of ('default', 'light-content', 'dark-content')
+               hidden: false, // Boolean value for the content of the status-bar content
+            },
+  }; 
+
+export const Header = () => {
 
     return (
-        <LottieView
-            ref={ani => {
-                this.ani = ani;
-            }}
-            source={changeSVGColor(require('./assets/lottie.json'), '#0081CF')}
-        />
+        <HeaderBar options={options}>
+          <Text>Content Here</Text>
+        </HeaderBar>
     );
 };
 ```

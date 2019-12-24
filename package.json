@@ -1,6 +1,6 @@
 {
   "name": "@killerwink/killer-react-native-header",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic react native header component",
   "main": "src/index.js",
   "scripts": {
